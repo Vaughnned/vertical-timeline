@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background-color: lightgray;
+  background-color: darkgray;
 }
 
 *,
@@ -19,16 +19,38 @@ body {
   width: 100%;
 }
 
-.cards div {
+.cards > div {
+  z-index: -5;
   position: relative;
-  height: 200px;
-  width: 300px;
-  border: solid black 1px;
+  height: 300px;
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 4px 2px -2px gray;
   margin: 50px;
+  background-color: whitesmoke;
+}
+
+.cards p {
+  text-align: center;
 }
 
 .cards div:nth-child(even) {
   margin-left: auto;
+}
+
+.date {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+  background-color: #ff615f;
+  color: white;
+  font-family: Arial;
+}
+
+.date:nth-child(even) {
+  top: 0px;
+  left: 0px;
 }
 
 .columns {
@@ -58,6 +80,59 @@ body {
   background-color: black;
 }
 
-/* #column3 {
-  width: 50%;
-} */
+#card2 {
+  height: 350px;
+}
+
+#card2 img {
+  z-index: -1;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+  opacity: 0.8;
+}
+#card2 .title {
+  color: white;
+}
+
+#card2 .date {
+  width: fit-content;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 0px;
+}
+
+#card2 aside {
+  position: absolute;
+  text-align: left;
+  margin: auto;
+  bottom: 75px;
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+aside {
+  width: 100%;
+  padding: 10px;
+  margin: auto;
+}
+
+p {
+  display: inline;
+}
+
+button {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 2px;
+  background-color: #0066cc;
+  color: white;
+  font-size: 12px;
+}
