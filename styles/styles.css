@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+  background-color: lightgray;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.timeline {
+  display: inline-block;
+  width: 100%;
+}
+
+.cards div {
+  position: relative;
+  height: 200px;
+  width: 300px;
+  border: solid black 1px;
+  margin: 50px;
+}
+
+/* .cards div:nth-child(even) {
+  margin-left: auto;
+} */
+
+#card1 {
+  margin-right: 0px;
+}
+
+.columns {
+  float: left;
+}
+
+#column1 {
+  width: 49.5%;
+}
+
+#column1 .cards {
+  float: right;
+}
+
+#column2 {
+  height: 100vh;
+  width: 1%;
+  background-color: black;
+}
+
+#column3 {
+  width: 49.5%;
+}
