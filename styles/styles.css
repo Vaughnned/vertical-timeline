@@ -10,12 +10,12 @@ html {
 }
 
 body {
-  height: 100vh;
   width: 100vw;
 }
 
 .timeline {
   display: inline-block;
+  height: 100%;
   width: 100%;
 }
 
@@ -27,12 +27,8 @@ body {
   margin: 50px;
 }
 
-/* .cards div:nth-child(even) {
+.cards div:nth-child(even) {
   margin-left: auto;
-} */
-
-#card1 {
-  margin-right: 0px;
 }
 
 .columns {
@@ -40,19 +36,28 @@ body {
 }
 
 #column1 {
-  width: 49.5%;
+  position: relative;
+  left: 15%;
+  height: 100vh;
+  width: 70%;
+  /* margin: 100px; */
 }
 
 #column1 .cards {
-  float: right;
+  position: relative;
 }
 
 #column2 {
+  position: absolute;
+  transform: translateX(-50%);
+  right: 50%;
+  left: 50%;
   height: 100vh;
+  margin: 10px 0px;
   width: 1%;
   background-color: black;
 }
 
-#column3 {
-  width: 49.5%;
-}
+/* #column3 {
+  width: 50%;
+} */
