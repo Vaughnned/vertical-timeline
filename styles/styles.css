@@ -20,7 +20,6 @@ body {
 }
 
 .cards > div {
-  z-index: -5;
   position: relative;
   height: 300px;
   max-height: 100%;
@@ -70,23 +69,23 @@ body {
   position: relative;
 }
 
-#column2 {
+/* this is the middle dividing line */
+.timeline::before {
+  content: "";
   position: absolute;
   transform: translateX(-50%);
-  right: 50%;
+  top: 0;
+  bottom: 0;
   left: 50%;
-  height: 100vh;
-  margin: 10px 0px;
-  width: 1%;
-  background-color: black;
+  border: solid 2px black;
 }
+/* -------------------------------- */
 
 #card2 {
   height: 350px;
 }
 
 #card2 img {
-  z-index: -1;
   position: absolute;
   left: 0px;
   width: 100%;
@@ -140,8 +139,8 @@ button {
 }
 
 button:hover {
-  border: solid black 2px;
-  background-color: aqua;
+  /* border: solid black 2px;
+  background-color: aqua; */
   color: black;
 }
 

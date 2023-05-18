@@ -1,0 +1,85 @@
+/* use var and import in weekend project   use dunders (__) when naming files
+
+@import "__header.css";   ex. of import
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.timeline {
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  background-color: gray;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  border: solid 2px red;
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-event {
+    height: 200px;
+    background-color: blue;
+    margin: 25px;
+    width: 45%;
+}
+
+.timeline-event:nth-child(even) {
+    float: right;
+    animation-duration: 2s;
+    animation-name: slideinright;
+}
+
+.timeline-event:not(:nth-child(even)) {
+    clear: both;
+    animation-duration: 2s;
+    animation-name: slideinleft;
+}
+
+@media (max-width: 768px) {
+.timeline-event {
+    width: 80%;
+}
+
+.timeline-event:nth-child(even) {
+    float: unset;
+}
+
+.timeline::before {
+    left: 0;
+}
+
+
+}
+
+@keyframes slideinleft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideinright {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+} */
